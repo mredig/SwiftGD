@@ -221,12 +221,12 @@ private struct WEBPFormatter: LibGdFormatter {
 
 /// Defines a formatter to be used on AVIF import & export conversions
 private struct AVIFFormatter: LibGdFormatter {
-     /// Function pointer to libgd's built-in avif image create function
-     fileprivate let importFunction: (Int32, UnsafeMutableRawPointer) -> gdImagePtr? = gdImageCreateFromAvifPtr
+    /// Function pointer to libgd's built-in avif image create function
+    fileprivate let importFunction: (Int32, UnsafeMutableRawPointer) -> gdImagePtr? = gdImageCreateFromAvifPtr
 
-     /// Function pointer to libgd's built-in avif image export function
-     fileprivate let exportFunction: (gdImagePtr, UnsafeMutablePointer<Int32>) -> UnsafeMutableRawPointer? = gdImageAvifPtr
- }
+    /// Function pointer to libgd's built-in avif image export function
+    fileprivate let exportFunction: (gdImagePtr, UnsafeMutablePointer<Int32>) -> UnsafeMutableRawPointer? = gdImageAvifPtr
+}
 
 // MARK: - Convenience LibGd Format
 
