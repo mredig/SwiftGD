@@ -346,6 +346,10 @@ extension Image {
         }
     }
 
+	public convenience init(_ ptr: gdImagePtr) {
+		self.init(gdImage: ptr)
+	}
+
     @discardableResult
     public func write(to url: URL, quality: Int = 100, allowOverwrite: Bool = false) -> Bool {
         let fileType = url.pathExtension.lowercased()
